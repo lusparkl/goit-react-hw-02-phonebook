@@ -1,4 +1,4 @@
-import { Contact } from "./Contact"
+import { Contact } from "./Contact/Contact"
 
 export const ContactsGroup = ({contacts, deleteContact}) => {
     return (

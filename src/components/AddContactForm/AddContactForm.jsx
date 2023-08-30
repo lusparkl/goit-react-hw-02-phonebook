@@ -1,4 +1,5 @@
 import { Form, Error } from './AddContactForm.styled';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid'
 
@@ -17,7 +18,7 @@ const Schema = Yup.object().shape({
 
 export const AddContactForm = ({ addContact }) => {
   return (
-      <Form
+      <Formik
           initialValues={{ name: '', phoneNumber: '' }}
           validationSchema={Schema}
           onSubmit={(values, { setSubmitting }) => {
@@ -34,7 +35,7 @@ export const AddContactForm = ({ addContact }) => {
               isSubmitting,
               
           }) => (
-              <form onSubmit={handleSubmit}>
+              <Form onSubmit={handleSubmit}>
                   <input
                       type="name"
                       name="name"
@@ -55,8 +56,8 @@ export const AddContactForm = ({ addContact }) => {
                   <button type="submit" disabled={isSubmitting}>
                       Submit
                   </button>
-              </form>
+              </Form>
           )}
-      </Form>
+      </Formik>
   )
 }
