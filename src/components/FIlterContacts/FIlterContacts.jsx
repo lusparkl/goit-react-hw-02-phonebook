@@ -1,4 +1,3 @@
-
 export const FilterContacts = ({findContact}) => {
   return (
       <>
