@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { AddContactForm } from "./AddContactForm/AddContactForm";
 import { ContactsGroup } from "./ContactsGroup/ContactsGroup";
-import { FilterContacts } from "./FilterContacts/FilterContacts";
+import { FilterContacts } from './FilterContacts/FilterContacts';
 
 
 export class App extends Component {
